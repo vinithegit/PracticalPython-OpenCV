@@ -1,4 +1,4 @@
-# To run: python load_save_display.py --image <path-of-image>
+# To run: python load_save_display.py --image deer.jpg
 
 from __future__ import print_function
 import argparse
@@ -11,7 +11,7 @@ args =  vars(ap.parse_args())
 image = cv2.imread(args["image"]) #returns numpy array representing image
 print("width: {} pixels".format(image.shape[1]))
 print("height: {} pixels".format(image.shape[0]))
-print("channles: {}".format(image.shape[2]))
+print("channels: {}".format(image.shape[2]))
 #Display
 cv2.imshow("Image", image)
 cv2.waitKey(0) #pauses execution until we press a key; 0 indicates any key press
